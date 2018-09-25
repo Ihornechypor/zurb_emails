@@ -1,0 +1,25 @@
+//btns
+
+.btn {
+  text-align: center;
+
+  a {
+    background-color: #ec5482;
+    border-radius: 50px;
+    color: #ffffff;
+    border-top: 15px solid #ec5482;
+    border-bottom: 15px solid #ec5482;
+    border-left: 60px solid #ec5482;
+    border-right: 60px solid #ec5482;
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 47px;
+
+    &:hover {
+      background-color: lighten(#ec5482, 5%);
+      border-color: lighten(#ec5482, 5%);
+    }
+  }
+}
+//btns_end

@@ -1,0 +1,60 @@
+.custom_bg {
+  background-color: white;
+}
+
+.bottom_align {
+  vertical-align: bottom;
+}
+
+.hide_large {
+  display: none;
+}
+//hero
+
+.hero {
+  &__heading {
+    color: #646262;
+    text-align: center;
+    font-weight: 200;
+
+    span {
+      font-weight: 500;
+    }
+  }
+}
+//hero end
+//servises start
+
+.info {
+  th {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  &__text {
+    text-align: center;
+    color: #8b8b8b;
+    font-size: 13;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  &__more {
+    text-transform: uppercase;
+    padding-bottom: 20px;
+    color: #605f5f;
+    font-size: 13px;
+    font-weight: 600;
+
+    &:visited {
+      color: #605f5f;
+    }
+  }
+}
+//servises end
+@media all and (max-width: 600px) {
+  .hide_large {
+    display: table!important;
+  }
+}
