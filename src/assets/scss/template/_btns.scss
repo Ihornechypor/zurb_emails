@@ -1,25 +1,39 @@
 //btns
-
-.btn {
+$btnColorsHero: #ec5482;
+$btnColorsSignUP: #eb5383;
+@mixin btn($color,$radius) {
   text-align: center;
 
   a {
-    background-color: #ec5482;
-    border-radius: 50px;
+    background-color: $color;
+    border-radius: $radius;
     color: #ffffff;
-    border-top: 15px solid #ec5482;
-    border-bottom: 15px solid #ec5482;
-    border-left: 60px solid #ec5482;
-    border-right: 60px solid #ec5482;
+    border-top: 15px solid $color;
+    border-bottom: 15px solid $color;
+    border-left: 60px solid $color;
+    border-right: 60px solid $color;
     font-family: sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 47px;
 
     &:hover {
-      background-color: lighten(#ec5482, 5%);
-      border-color: lighten(#ec5482, 5%);
+      background-color: lighten($color, 5%);
+      border-color: lighten($color, 5%);
     }
+  }
+}
+
+.btn {
+  @include btn($btnColorsHero, 50px);
+}
+
+.btn--colored {
+  @include btn($btnColorsSignUP, 0);
+
+  a {
+    text-transform: uppercase;
+    font-weight: 600;
   }
 }
 //btns_end

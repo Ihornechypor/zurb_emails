@@ -58,3 +58,62 @@
     display: table!important;
   }
 }
+//reviews
+
+.reviews {
+  &__text {
+    text-align: center;
+    color: #8b8b8b;
+    font-size: 13;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    padding: 10px;
+    border: 1px solid #8b8b8b;
+  }
+}
+//reviews end
+//news
+
+.news {
+  a {
+    text-align: center;
+  }
+
+  p {
+    text-align: left;
+  }
+}
+//news end
+//signup
+
+.signup {
+  h2 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+  }
+}
+//signup end
+//footer
+
+.footer {
+  div {
+    color: #bcc9dd;
+    text-align: center;
+  }
+
+  table.menu {
+    th.menu-item a {
+      text-align: center;
+      color: #bcc9dd;
+      line-height: 1;
+      text-decoration: none;
+
+      span {
+        text-decoration: none;
+      }
+    }
+  }
+}
+//footer end

@@ -22,6 +22,7 @@ $light-gray: #f3f3f3;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
+$bellacolor: #8b8b8b;
 $white: #fefefe;
 $pre-color: #646262;
 $global-width: 580px;
@@ -42,7 +43,7 @@ $container-radius: 0; // 3. Block Grid
 $block-grid-max: 8;
 $block-grid-gutter: $global-gutter; // 4. Typography
 // -------------
-$global-font-color: $black;
+$global-font-color: $bellacolor;
 $body-font-family: 'Raleway', Arial, Helvetica, sans-serif;
 $global-font-weight: normal;
 $header-color: inherit;
@@ -73,9 +74,9 @@ $hr-width: $global-width;
 $hr-border: 1px solid $black;
 $hr-margin: 20px auto;
 $anchor-text-decoration: none;
-$anchor-color: $primary-color;
-$anchor-color-visited: $anchor-color;
-$anchor-color-hover: darken($primary-color, 10%);
+$anchor-color: $bellacolor;
+$anchor-color-visited: $bellacolor;
+$anchor-color-hover: darken($bellacolor, 10%);
 $anchor-color-active: $anchor-color-hover;
 $stat-font-size: 40px; // 5. Button
 // ---------
@@ -112,7 +113,7 @@ $callout-border-alert: 1px solid darken($alert-color, 20%); // 7. Menu
 // -------
 $menu-item-padding: 10px;
 $menu-item-gutter: 10px;
-$menu-item-color: $primary-color; // 8. Thumbnail
+$menu-item-color: $bellacolor; // 8. Thumbnail
 // ------------
 $thumbnail-border: solid 4px $white;
 $thumbnail-margin-bottom: $global-margin;
