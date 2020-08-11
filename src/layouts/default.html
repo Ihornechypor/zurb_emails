@@ -3,31 +3,27 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="en">
   <head>
     <link rel="stylesheet" type="text/css" href="{{root}}css/app.css">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>{{subject}}</title>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:200,400,300,600,500' rel='stylesheet' type='text/css'>
-
-
-      <!-- inject:gmail -->
-      <!-- endinject -->
-    <!-- <style> -->
-
- 
-  
-
-
-
+    <meta name="format-detection" content="telephone=no">
+    <style>
+      @media only screen {
+      html {
+        min-height: 100%;
+        background: #f3f3f3;
+      }
+    }
+    </style>
+    <!--[if (mso)|(mso 16)]><style type="text/css">a {text-decoration: none;}</style><![endif]-->
   </head>
   <body>
-    <span class="preheader">{{description}}</span>
     <table class="body">
       <tr>
-        <td class="center" align="center" valign="top">
-          <center>
+        <td class="center" align="center" valign="top" style="padding-top: 20px;padding-bottom: 20px;">
+          <center style="min-width: 600px">
             {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened emails are created. --}}
             {{> body}}
           </center>

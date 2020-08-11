@@ -1,0 +1,55 @@
+.activation-info-outer-table {
+  border-bottom: 8px solid $primary-color;
+}
+
+.activation-info-table {
+  width: 100%;
+  background: $warning-color;
+}
+.activation-info-box {
+  padding: 30px 34px 10px 34px;
+}
+
+.activation-info-inner-wrap {
+  padding: 30px 40px 30px 40px;
+}
+
+.activation-info-head {
+  padding: 0 0 30px 0;
+  font-size: 23px;
+  color: $primary-color;
+}
+
+.activation-info-wrap {
+  width: 230px;
+}
+
+.activation-info-tel {
+  font-size: 30px;
+  color: $black;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.activation-info-rule {
+  padding: 0 0 15px;
+  font-size: 14px;
+  color: $primary-color;
+}
+
+.activation-info-heading {
+  font-size: 17px;
+  color: $primary-color;
+}
+
+
+.activation-info-item {
+  padding: 16px 0 0 0;
+  font-size: 16px;
+}
+
+.activation-info-text-box {
+  padding: 20px 74px 30px 74px;
+  color: $primary-color;
+  font-size: 17px;
+}

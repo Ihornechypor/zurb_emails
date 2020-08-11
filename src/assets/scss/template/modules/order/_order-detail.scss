@@ -1,0 +1,173 @@
+// block extends
+.order-detail-subhead {
+  font-size: 17px;
+  color: $primary-color;
+}
+// block extends
+
+.order-detail-wrap {
+  padding: 10px 34px 10px 34px;
+}
+
+.order-detail-heading {
+  font-size: 23px;
+  color: $primary-color;
+}
+
+
+.order-detail-heading-box {
+  padding: 40px 74px 10px 74px;
+}
+
+.order-detail-table {
+  background: $warning-color;
+
+  &.order-detail-table-first {
+    background: #DFDFF6;
+  }
+}
+
+.order-detail-table-box {
+  padding: 30px 40px 35px 40px;
+}
+
+.order-detail-table-head {
+  font-size: 17px;
+  color: $primary-color;
+}
+
+.order-detail-number-box {
+  padding: 0 0 16px 0;
+}
+
+.order-detail-number {
+  color: $black;
+  font-size: 30px;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.order-detail-date {
+  padding: 0 0 12px 0;
+  font-size: 14px;
+  color: $primary-color;
+}
+
+.order-detail-date-box {
+  padding: 0 0 16px 0;
+  width: 200px
+}
+
+.order-detail-date-number {
+  font-size: 20px;
+  color: $primary-color;
+}
+
+.order-detail-table-wrap {
+  width: 100%;
+  border-bottom: 1px solid $primary-color;
+}
+
+.order-detail-reason {
+  font-size: 13px;
+  color: $primary-color;
+}
+
+.order-device-gadget-head {
+  @extend .order-detail-subhead;
+  padding: 25px 0 5px 0;
+}
+
+.order-device-gadget-text {
+  padding: 0 0 25px 0;
+  font-size: 19px;
+}
+
+.order-device-gadget-price {
+  width: 100px;
+  padding: 0 0 25px 0;
+  text-align: right;
+}
+
+.order-detail-offer-table {
+  width: 100%;
+}
+
+.device-gadget-table {
+  width: 100%;
+  border-bottom: 1px solid $primary-color;
+}
+
+.order-detail-offer-head {
+  @extend .order-detail-subhead;
+  padding: 30px 0;
+}
+
+.order-detail-offer-box {
+  width: 100%;
+
+  &.last {
+    border-bottom: 1px solid $primary-color;
+  }
+}
+
+.order-detail-offer-img {
+  ine-height: 25%;
+  padding: 0 0 30px;
+}
+
+.order-service-table {
+  width: 100%;
+  border-bottom: 1px solid $primary-color;
+}
+
+.order-service-head {
+  @extend .order-detail-subhead;
+  padding: 30px 0 10px 0;
+}
+
+.order-service-badge-box {
+  padding-bottom: 5px;
+
+  &.last {
+    padding-bottom: 30px;
+  }
+}
+
+.order-service-badge {
+  padding: 5px 6px;
+  background-color: $primary-color;
+  color: $white;
+  font-size:11px;
+  text-align:center;
+}
+
+.order-more-table {
+  width: 100%;
+}
+
+.order-more-head {
+  @extend .order-detail-subhead;
+  padding: 30px 0 30px 0;
+}
+
+.order-more-img {
+  line-height: 0;
+}
+
+.order-legal-table {
+  width: 100%;
+}
+
+.order-more-text {
+  padding: 0 0 25px 20px;
+  width: 330px;
+  vertical-align: middle;
+  font-size: 10px;
+  color: $primary-color;
+}
+
+.order-legal-text {
+  font-size: 10px;
+  color: $primary-color;
+}

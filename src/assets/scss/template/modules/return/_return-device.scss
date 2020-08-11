@@ -1,0 +1,36 @@
+.return-device-box {
+  padding: 20px 34px 40px 34px;
+}
+
+.return-device-table {
+  width: 100%;
+  background: $warning-color;
+}
+
+.return-device-info-box {
+  width: 215px;
+  padding: 20px 0 20px 40px;
+}
+
+.return-device-heading {
+  font-size: 17px;
+  color: $primary-color;
+}
+
+.return-device-tel {
+  font-size: 19px;
+  color: $black;
+  cursor: pointer;
+  pointer-events: none;
+}
+
+.return-device-status-box {
+  vertical-align: middle;
+  padding: 20px 40px 20px 0;
+}
+
+.return-device-status-text {
+  font-size: 13px;
+  color: $primary-color;
+}
+

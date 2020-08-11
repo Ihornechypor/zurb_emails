@@ -1,0 +1,48 @@
+.order-online-box {
+  padding: 40px 34px 30px 34px;
+}
+
+.order-online-table {
+  background: $primary-color;
+}
+
+.order-online-table {
+  width: 100%;
+}
+
+.order-online-wrap {
+  padding: 40px 44px 48px 44px;
+}
+
+.order-online-text {
+  padding: 0 0 20px 0;
+  font-size: 17px;
+  color: $white;
+}
+
+.order-online-text-alert {
+  padding: 10px 0;
+  border-top: 1px solid $success-color;
+  border-bottom: 1px solid $success-color;
+  font-size: 17px;
+  color: $success-color;
+}
+
+.order-online-btn-box {
+  padding: 50px 0 0 0;
+}
+
+.order-online-btn {
+  background-color: $success-color;
+  color: $white;
+  line-height: 1;
+  font-size:18px;
+  text-align:center;
+}
+
+.order-online-btn-col {
+  padding: 13px 0 13px 0;
+  vertical-align: middle;
+  background-color: $success-color;
+  text-align: center;
+}

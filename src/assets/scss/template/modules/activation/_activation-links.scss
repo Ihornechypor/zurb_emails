@@ -1,0 +1,41 @@
+.activation-links-box {
+  padding: 40px 80px 10px 80px;
+}
+
+.activation-links-icon-wrap {
+  padding: 0 40px 0 0;
+}
+
+.activation-links-icon-box {
+  padding: 0 0 10px 0;
+}
+
+.activation-links-icon-text {
+  text-align: center;
+  color: $primary-color;
+}
+
+.activation-links-text {
+  padding: 0 0 15px 0;
+  color: $primary-color;
+
+  &.padded-double {
+    padding: 0 0 30px 0;
+  }
+}
+
+.activation-links-text-table {
+  width: 100%;
+}
+
+.activation-links-stores-table {
+  width: 100%;
+}
+
+.activation-links-stores-img {
+  width: 120px;
+}
+
+.activation-links-stores-box {
+  padding: 0 10px 0 0;
+}

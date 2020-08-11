@@ -1,0 +1,54 @@
+.order-review-box {
+  background: #E0E0E0;
+}
+.order-review-bordered-top {
+  border-top: 34px solid $primary-color;
+}
+
+.order-review-heading-box {
+  padding: 40px 74px 35px 74px
+}
+
+.order-review-heading{
+  font-size: 23px;
+  color: $primary-color;
+}
+
+
+.order-review-text {
+  padding: 0 74px 35px 74px;
+  font-size: 17px;
+  color: $primary-color;
+}
+
+.order-review-btn-box {
+  padding: 0 74px 35px 74px
+}
+
+
+.order-review-btn {
+  background-color: $success-color;
+  color:#ffffff;
+  line-height: 1;
+  font-size:18px;
+  text-align:center;
+}
+
+.order-review-btn-col {
+  background-color: $success-color;
+  padding: 13px 0 13px 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+
+.order-review-legal {
+  padding: 0 74px 65px 74px;
+  font-size: 12px;
+  color: $dark-gray;
+}
+
+
+.order-review-legal-link {
+  color: $success-color;
+}

@@ -1,0 +1,34 @@
+.order-device-heading-box {
+  padding: 36px 74px 10px 74px;
+}
+
+.order-device-heading {
+  font-size: 23px;
+  color: $primary-color;
+}
+
+.order-device-wrap {
+  padding: 0 34px;
+}
+
+.order-device-table {
+  width: 100%;
+  background: $warning-color;
+}
+
+.order-device-box {
+  padding: 20px 40px;
+  vertical-align: middle;
+  font-size: 19px;
+  line-height: 1;
+}
+
+.order-device-price {
+  text-align: right;
+  width: 100px;
+  padding: 20px 30px 20px 5px;
+  font-size: 27px;
+  vertical-align: middle;
+  color: $primary-color;
+  line-height: 1;
+}

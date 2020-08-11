@@ -11,21 +11,28 @@ import siphon   from 'siphon-media-query';
 import path     from 'path';
 import merge    from 'merge-stream';
 import beep     from 'beepbeep';
-import colors   from 'colors';
-import inject   from 'gulp-inject';
+
 
 const $ = plugins();
 
-// Look for the --production flag
+// Look for the flags
 const PRODUCTION = !!(yargs.argv.production);
+const DELETECLASS = !!(yargs.argv.deleteclass);
 const EMAIL = yargs.argv.to;
+
+
 
 // Declar var so that both AWS and Litmus task can use it.
 var CONFIG;
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(clean, pages, sass, images, inline, gmail));
+  gulp.series(clean, pages, sass, images, inline));
+
+
+// Build the "dist" folder by running all of the below tasks deleting classes (no serve mode)
+gulp.task('buildhard',
+    gulp.series(clean, pages, sass, images, inline, unMinifyImageCopy, unMinifyEmail, minifyImageCopy, minifyEmailCopy, cleanCSSImgEmail));
 
 // Build emails, run the server, and watch for file changes
 gulp.task('default',
@@ -42,6 +49,7 @@ gulp.task('mail',
 // Build emails, then zip
 gulp.task('zip',
   gulp.series('build', zip));
+
 
 // Delete the "dist" folder
 // This happens every time a build starts
@@ -91,6 +99,52 @@ function images() {
     .pipe(gulp.dest('./dist/assets/img'));
 }
 
+
+// create max folder with emails
+function unMinifyEmail() {
+    return gulp.src(['dist/*.html'])
+        .pipe(maximizer())
+        .pipe(gulp.dest('dist/unMinEmail'))
+}
+
+
+function maximizer() {
+    var pipe = lazypipe()
+        .pipe($.prettyHtml);
+    return pipe();
+}
+// end
+
+// copy images to max folder
+function unMinifyImageCopy() {
+    return gulp.src(['dist/assets/img/**/*'])
+        .pipe($.imagemin())
+        .pipe(gulp.dest('./dist/unMinEmail/assets/img'));
+}
+
+// copy images to min folder
+function minifyImageCopy() {
+    return gulp.src(['dist/assets/img/**/*'])
+        .pipe($.imagemin())
+        .pipe(gulp.dest('./dist/minEmail/assets/img'));
+}
+
+// copy emails to min folder
+function minifyEmailCopy() {
+    return gulp.src(['dist/*.html'])
+        .pipe(gulp.dest('./dist/minEmail/'));
+}
+
+
+// delete css-folder
+function cleanCSSImgEmail(done) {
+    rimraf('dist/css', done);
+    rimraf('dist/assets', done);
+    rimraf('dist/*.html', done);
+}
+
+
+
 // Inline CSS and minify HTML
 function inline() {
   return gulp.src('dist/**/*.html')
@@ -99,18 +153,6 @@ function inline() {
 }
 
 
-// inject gmail fix after inlining
-function gmail() {
-  return gulp.src('dist/**/*.html')
-  .pipe(inject(gulp.src(['src/assets/scss/extras/gmail-hack.html']), {
-    starttag: '<!-- inject:gmail -->',
-    transform: function (filePath, file) {
-      // return file contents as string
-      return file.contents.toString('utf8')
-    }
-  }))
-  .pipe(gulp.dest('dist'));
-}
 
 // Start a server with LiveReload to preview the site in
 function server(done) {
@@ -122,7 +164,7 @@ function server(done) {
 
 // Watch for file changes
 function watch() {
-  gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, inline, gmail,browser.reload));
+  gulp.watch('src/pages/**/*.html').on('all', gulp.series(pages, inline, browser.reload));
   gulp.watch(['src/layouts/**/*', 'src/partials/**/*']).on('all', gulp.series(resetPages, pages, inline, browser.reload));
   gulp.watch(['../scss/**/*.scss', 'src/assets/scss/**/*.scss']).on('all', gulp.series(resetPages, sass, pages, inline, browser.reload));
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
@@ -131,24 +173,26 @@ function watch() {
 // Inlines CSS into HTML, adds media query CSS into the <style> tag of the email, and compresses the HTML
 function inliner(css) {
   var css = fs.readFileSync(css).toString();
-  // var customGoogle = "@media all and (min-width: 0px){@goodbye{@gmail}}";
   var mqCss = siphon(css);
+
   var pipe = lazypipe()
     .pipe($.inlineCss, {
       applyStyleTags: false,
       removeStyleTags: true,
       preserveMediaQueries: true,
-      removeLinkTags: false
+      removeLinkTags: false,
+      removeHtmlSelectors:DELETECLASS
     })
     .pipe($.replace, '<!-- <style> -->', `<style>${mqCss}</style>`)
     .pipe($.replace, '<link rel="stylesheet" type="text/css" href="css/app.css">', '')
     .pipe($.htmlmin, {
-      collapseWhitespace: true,
-      minifyCSS: true
+        collapseWhitespace: true,
+        minifyCSS: true
     });
 
   return pipe();
 }
+
 
 // Ensure creds for Litmus are at least there.
 function creds(done) {

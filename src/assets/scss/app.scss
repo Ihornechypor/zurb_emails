@@ -1,8 +1,49 @@
 @import 'settings';
 @import 'foundation-emails';
-@import 'template/template';
-@import 'template/menu';
-@import 'template/btns';
-@import 'template/accordion';
-@import 'template/accordion2';
-@import 'template/gmail-hack.css';
+
+
+// template
+@import 'template/_template';
+
+// layout
+@import 'template/header';
+@import 'template/footer';
+
+
+
+
+// modules
+
+//order
+@import 'template/modules/order/order-steps';
+@import 'template/modules/order/order-safety';
+@import 'template/modules/order/order-review';
+@import 'template/modules/order/order-questions';
+@import 'template/modules/order/order-data';
+@import 'template/modules/order/order-noabonament';
+@import 'template/modules/order/order-detail';
+@import 'template/modules/order/order-inform';
+@import 'template/modules/order/order-device';
+@import 'template/modules/order/order-examination';
+@import 'template/modules/order/order-online';
+
+
+//return
+@import 'template/modules/return/return-device';
+@import 'template/modules/return/return-info';
+
+
+//cancel
+@import 'template/modules/cancel/cancel-order';
+
+
+//send
+@import 'template/modules/send/send-info';
+@import 'template/modules/send/send-steps';
+
+
+// activation
+@import 'template/modules/activation/activation-links';
+@import 'template/modules/activation/activation-info';
+
+

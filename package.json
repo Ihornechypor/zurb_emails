@@ -7,14 +7,17 @@
   "scripts": {
     "start": "gulp",
     "build": "gulp --production",
-    "zip": "gulp zip --production",
     "litmus": "gulp litmus --production",
-    "mail": "gulp mail --production"
+    "mail": "gulp mail --production",
+    "zip": "gulp zip --production --deleteclass",
+    "buildhard": "gulp buildhard --production --deleteclass"
   },
   "author": "ZURB <foundation@zurb.com>",
   "license": "MIT",
   "dependencies": {
-    "foundation-emails": "^2.2.1"
+    "cheerio": "^1.0.0-rc.3",
+    "foundation-emails": "^2.2.1",
+    "gulp-cheerio": "^1.0.0"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",
@@ -23,21 +26,21 @@
     "beepbeep": "^1.2.0",
     "browser-sync": "^2.11.0",
     "colors": "^1.1.2",
-    "gulp": "git+https://github.com/gulpjs/gulp.git#4.0",
+    "gulp": "^4.0.0",
     "gulp-awspublish": "^3.0.1",
     "gulp-cli": "^1.1.0",
     "gulp-html-src": "^1.0.0",
     "gulp-htmlmin": "^1.1.1",
     "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.4.0",
-    "gulp-inject": "^4.3.2",
     "gulp-inline-css": "^3.0.0",
     "gulp-litmus": "0.0.7",
     "gulp-load-plugins": "^1.1.0",
     "gulp-mail": "^0.1.1",
+    "gulp-pretty-html": "^2.0.10",
     "gulp-rename": "^1.2.2",
     "gulp-replace": "^0.5.4",
-    "gulp-sass": "^3.1.0",
+    "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uncss": "^1.0.1",
     "gulp-zip": "^3.2.0",
