@@ -4,6 +4,7 @@
 //  Table of Contents:
 //
 //   1. Global
+
 //   2. Grid
 //   3. Block Grid
 //   4. Typography
@@ -16,8 +17,8 @@
 // 1. Global
 // ---------
 
-$primary-color: #001136;
-$primary-color: #102045;
+$primary-color: #fff;
+$primary-color: #fff;
 $secondary-color: #777777;
 $success-color: #E00047;
 $warning-color: #ECECEC;
@@ -29,8 +30,8 @@ $black: #000;
 $white: #fff;
 $pre-color: #ff6908;
 $global-width: 600px;
-$global-width-small: 95%;
-$global-gutter: 34px;
+$global-width-small: 100%;
+$global-gutter: 50px;
 $body-background: $light-gray;
 $container-background: $white;
 $global-padding: 24px;
@@ -56,15 +57,15 @@ $block-grid-gutter: $global-gutter;
 // -------------
 
 $global-font-color: $primary-color;
-$body-font-family: Arial,sans-serif;
-$global-font-weight: normal;
+$body-font-family: Roboto,Arial,sans-serif;
+$global-font-weight: 300;
 $header-color: inherit;
-$global-line-height: 1.3;
+$global-line-height: 1.4;
 $global-font-size: 18px;
 $body-line-height: $global-line-height;
 $header-font-family: $body-font-family;
 $header-font-weight: $global-font-weight;
-$h1-font-size: 34px;
+$h1-font-size: 54px;
 $h2-font-size: 30px;
 $h3-font-size: 28px;
 $h4-font-size: 24px;
